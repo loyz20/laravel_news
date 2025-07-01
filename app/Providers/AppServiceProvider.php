@@ -23,11 +23,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if (Schema::hasTable('categories')) {
-            View::share('categories', \App\Models\Category::orderBy('name')->get());
-        }
-        if (Schema::hasTable('tags')) {
-            View::share('tags', \App\Models\Tag::withCount('news')->orderByDesc('news_count')->take(10)->get());
-        }
+        // if (Schema::hasTable('categories')) {
+        //     View::share('categories', \App\Models\Category::orderBy('name')->get());
+        // }
+        // if (Schema::hasTable('tags')) {
+        //     View::share('tags', \App\Models\Tag::withCount('news')->orderByDesc('news_count')->take(10)->get());
+        // }
     }
 }
